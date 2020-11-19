@@ -1,1 +1,23 @@
-<html><body><audio autoplay><source src="https://raw.githack.com/ZFDew/File-Audio/main/LilNasX-OldTownRoad(Lyrics)ft.BillyRayCyrus.mp3" type=""audio/mpeg">Your browser does not support the audio element.</audio></body></html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>   
+		var current, playlist;
+        current = 0;
+		function loadplaylist() {
+         current++;
+         var songs = Array("https://github.com/ZFDew/File-Audio/raw/main/Killing%20Me%20Sofly%20-%20Fugees.mp3", "https://github.com/ZFDew/File-Audio/raw/main/Walking%20After%20You%20-%20Foo%20Fighters.mp3", "https://github.com/ZFDew/File-Audio/raw/main/Butterfly%20-%20Crazy%20Town.mp3", "https://github.com/ZFDew/File-Audio/raw/main/To%20the%20Moon%20%26%20Back%20-%20Savage%20Garden.mp3");
+         playlist = songs.length;
+         if (current == playlist) {
+           //do nothing or stop
+         } else {
+           this.playOptions = document.getElementById("audio");
+           this.playOptions.src = songs[current];
+           this.playOptions.play();
+         }
+     }
+	  </script>
+  </head>
+<body>
+<audio id="audio" onended="loadplaylist()" src="https://github.com/ZFDew/File-Audio/raw/main/KD%20announce.mp3"  controls  ></audio>
+</body>
