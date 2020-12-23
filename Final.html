@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>   
+		var current, playlist;
+        current = 0;
+		function loadplaylist() {
+         current++;
+         var songs = Array("https://github.com/ZFDew/File-Audio/raw/main/Walking%20After%20You%20-%20Foo%20Fighters.mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/JoeyMcintyre-StayTheSameLyrics.mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/Owlcity-Fireflies.mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/Owlcity-Vanillatwilight.mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/CountingCrows-BigYellowTaxift.VanessaCarlton(OfficialVideo).mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/MichaelLearnsToRock-PaintMyLove.mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/NSYNC-ByeByeBye(Audio).mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/RonanKeating-WhenYouSayNothingAtAll.mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/Westlife-FoolAgain(OfficialVideo).mp3",
+		 "https://github.com/ZFDew/File-Audio/raw/main/BackstreetBoys-ShowMeTheMeaningOfBeingLonely(Millennium20Edition).mp3");
+         playlist = songs.length;
+         if (current == playlist) {
+           //do nothing or stop
+         } else {
+           this.playOptions = document.getElementById("audio");
+           this.playOptions.src = songs[current];
+           this.playOptions.play();
+         }
+     }
+	  </script>
+  </head>
+<body id="width: 1500px;&#10;height: 400px;">
+<audio id="audio" onended="loadplaylist()" src="https://github.com/ZFDew/File-Audio/raw/main/KD%20announce.mp3"  controls autoplay ></audio>
+</body>
+</html>
